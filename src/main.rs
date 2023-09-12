@@ -43,8 +43,7 @@ struct SerializedVectorDB {
 // mean squared error
 fn distance(a: &Tensor, b: &Tensor) -> f32 {
     let d = ((a-b).pow_tensor_scalar(2.).sum(None));
-    //panic!("{:?}", a.transpose(0, 1).size());
-    //d.double_value(&[]) as f32
+    d.double_value(&[]) as f32
 }
 
 // Split by line

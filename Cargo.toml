@@ -1,0 +1,17 @@
+[package]
+name = "bruh"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.75"
+markdown = "1.0.0-alpha.13"
+rust-bert = { version = "0.21.0", features = ["download-libtorch"] }
+serde = { version = "1.0.188", features = ["derive"] }
+serde_yaml = "0.9.25"
+tch = "0.13.0"
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
